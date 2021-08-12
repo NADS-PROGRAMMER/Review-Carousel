@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Personal-Projects/Project Review Carousel/review.css">
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="/CSS/review.min.css">
     <title>Review Carousel</title>
-    <script src="/Personal-Projects/Project Review Carousel/add.js"></script>
-    <script src="/Personal-Projects/Project Review Carousel/review.js"></script>
 </head>
+
 <body>
     <div class="main-content">
         <!-- This is the main title -->
-        <h1>App Reviews</h1> 
-        <hr>
+        <section class="title-section">
+            <h1>App Reviews</h1>
+            <hr>
+        </section>
         <div id="review-list" class="carousel">
-        
+            
             <div class="image-division">
                 <span id="quot-logo">&#x201D;</span>
-                <img id="person-photo" src="" alt="">
+                <img id="person-photo" src="/Images/Nads2.jpg" alt="">
             </div>
-        
+
             <h4 class="person-name">Nads Marcelo</h4>
             <h5 class="profession">Web Developer</h5>
-            <p class="content-review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam iure perspiciatis soluta
-                aspernatur vitae hic sit ab facere. Saepe, tempore dolor. Dolore enim id esse error perferendis vitae fugiat
+            <p class="content-review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam iure
+                perspiciatis soluta
+                aspernatur vitae hic sit ab facere. Saepe, tempore dolor. Dolore enim id esse error perferendis vitae
+                fugiat
                 blanditiis!</p>
-                <div>
-                    <span id="backward">&#x2039;</span>
-                    <span id="forward">&#x203A;</span>
-                </div>
+            <div>
+                <span id="backward">&#x2039;</span>
+                <span id="forward">&#x203A;</span>
+            </div>
         </div>
     </div>
+
+    <!-- SCRIPT TAGS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script type="module" src="/Javascript/review.js"></script>
 </body>
+
 </html>
