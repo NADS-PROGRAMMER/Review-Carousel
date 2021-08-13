@@ -132,8 +132,8 @@ body {
 .carousel p {
   font-size: 1.2rem;
   font-family: "Tahoma";
+  min-height: 30px;
   text-align: center;
-  min-height: 76px;
   margin: 0px auto 0px auto;
   word-break: keep-all;
 }
@@ -157,4 +157,11 @@ body {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 992px) {
+  .carousel {
+    width: 608px;
+    height: 60%;
+  }
 }

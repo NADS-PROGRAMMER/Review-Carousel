@@ -3,7 +3,6 @@ import Person from './Person.js';
 
 let timeline = gsap.timeline();
 
-let quoteLogo = document.querySelector('#quot-logo');
 let image = document.querySelector('#person-photo');
 let name = document.querySelector('.person-name');
 let profession = document.querySelector('.profession');
@@ -13,31 +12,31 @@ let index = 0;
 const websiteReviews = [
 
     {
-        person: new Person('Nads Marcelo', 'Web Developer', 'This is a good website!'), imageSrc: '\/Images\/Nads2.jpg'
+        person: new Person('Nads', 'Web Developer', 'This app helped me to do a lot of stuff! It makes me more productive and motivated to do programming stuff!'), imageSrc: '\/Images\/Nads2.jpg'
     },
     {
-        person: new Person('Alyana Pornelosa', 'Web Designer', 'This is a good website!'), imageSrc: '\/Images\/Alyana.jpg'
+        person: new Person('Alyana', 'Web Designer', 'Designing a website is tough and rough, BUT! this website helped me to organize my time!'), imageSrc: '\/Images\/Alyana.jpg'
     },
     {
-        person: new Person('Benzer', 'Web Developer', 'This is a good website!'), imageSrc: '\/Images\/Benzer.jpg'
+        person: new Person('Benzer', 'Web Developer', 'This app helped me to do a lot of stuff! It makes me more productive and motivated to do programming stuff!'), imageSrc: '\/Images\/Benzer.jpg'
     },
     {
-        person: new Person('Diana May', 'Civil Engineer', 'This is a good website!'), imageSrc: '\/Images\/Diana May.jpg'
+        person: new Person('Diana', 'Civil Engineer', 'This app helped me to do a lot of stuff! It makes me more productive and motivated to do programming stuff!'), imageSrc: '\/Images\/Diana May.jpg'
     },
     {
-        person: new Person('Dicky Atendido', 'Software Engineer', 'This is a good website!'), imageSrc: '\/Images\/Dicky.jpg'
+        person: new Person('Dicky', 'Software Engineer', 'This app helped me to do a lot of stuff! It makes me more productive and motivated to do programming stuff!'), imageSrc: '\/Images\/Dicky.jpg'
     },
     {
-        person: new Person('Lenard Opo', 'Data Analyst', 'This is a good website!'), imageSrc: '\/Images\/Lenard.jpg'
+        person: new Person('Lenard', 'Data Analyst', 'This app helped me to do a lot of stuff! It makes me more productive and motivated to do programming stuff!'), imageSrc: '\/Images\/Lenard.jpg'
     },
     {
-        person: new Person('NIKI', 'Singer/Songwriter', 'This is a good website!'), imageSrc: '\/Images\/Love.jpg'
+        person: new Person('NIKI', 'Singer/Songwriter', 'This app helped me to do a lot of stuff! It makes me more productive and motivated to do programming stuff!'), imageSrc: '\/Images\/Love.jpg'
     },
     {
-        person: new Person('Rachel Recto', 'Certified Public Accountant', 'This is a good website!'), imageSrc: '\/Images\/Rachel.jpg'
+        person: new Person('Rachel', 'Certified Public Accountant', 'This app helped me to do a lot of stuff! It makes me more productive and motivated to do programming stuff!'), imageSrc: '\/Images\/Rachel.jpg'
     },
     {
-        person: new Person('RC Suelo', 'System Analyst', 'This is a good website!'), imageSrc: '\/Images\/RC.jpg'
+        person: new Person('RC', 'System Analyst', 'This app helped me to do a lot of stuff! It makes me more productive and motivated to do programming stuff!'), imageSrc: '\/Images\/RC.jpg'
     },
 ]
 
@@ -53,6 +52,9 @@ document.querySelector('#forward').addEventListener('click', () => {
     if (!timeline.isActive()) {
         timeline.from('#person-photo', {x: "100%", opacity: 0, duration: .3, ease: "power1.out"});
         timeline.from('#quot-logo', {x: "100%", opacity: 0, duration: .3, ease: "power1.out"}, "-=.3");
+        timeline.from('.person-name', {x: "100%", opacity: 0, duration: .3, ease: "power1.out"});
+        timeline.from('.profession', {x: "100%", opacity: 0, duration: .3, ease: "power1.out"}, "-=.3");
+        timeline.from('.content-review', {x: "100%", opacity: 0, duration: .3, ease: "power1.out"}, "-=.3");
     }
 });
 
@@ -68,5 +70,8 @@ document.querySelector('#backward').addEventListener('click', () => {
     if (!timeline.isActive()) {
         timeline.from('#person-photo', {x: "-100%", opacity: 0, duration: .3, ease: "power1.out"});
         timeline.from('#quot-logo', {x: "-100%", opacity: 0, duration: .3, ease: "power1.out"}, "-=.3");
+        timeline.from('.person-name', {x: "-100%", opacity: 0, duration: .3, ease: "power1.out"});
+        timeline.from('.profession', {x: "-100%", opacity: 0, duration: .3, ease: "power1.out"}, "-=.3");
+        timeline.from('.content-review', {x: "-100%", opacity: 0, duration: .3, ease: "power1.out"}, "-=.3");
     }
 });
