@@ -9,6 +9,7 @@ let profession = document.querySelector('.profession');
 let reviewCont = document.querySelector('.content-review');
 let index = 0;
 
+
 // An array that contains all the website reviews including the photos, names, and profession.
 const websiteReviews = [
 
