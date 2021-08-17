@@ -9,6 +9,7 @@ let profession = document.querySelector('.profession');
 let reviewCont = document.querySelector('.content-review');
 let index = 0;
 
+// An array that contains all the website reviews including the photos, names, and profession.
 const websiteReviews = [
 
     {
@@ -43,12 +44,15 @@ const websiteReviews = [
 document.querySelector('#forward').addEventListener('click', () => {
 
     index++;
+    // conditions that checks if the index is greather than the (length - 1) of an array.
     index = index > websiteReviews.length - 1 ? 0 : index;
+
     image.src = websiteReviews[index].imageSrc;
     name.textContent = websiteReviews[index].person.getName();
     profession.textContent = websiteReviews[index].person.getProfession();
     reviewCont.textContent = websiteReviews[index].person.getReview();
 
+    // Check if the animation is not active to avoid double-clicking to the button.
     if (!timeline.isActive()) {
         timeline.from('#person-photo', {x: "100%", opacity: 0, duration: .3, ease: "power1.out"});
         timeline.from('#quot-logo', {x: "100%", opacity: 0, duration: .3, ease: "power1.out"}, "-=.3");
@@ -61,12 +65,15 @@ document.querySelector('#forward').addEventListener('click', () => {
 document.querySelector('#backward').addEventListener('click', () => {
 
     index--;
+    // conditions that checks if the index is less than 0
     index = index < 0 ? websiteReviews.length - 1 : index;
+
     image.src = websiteReviews[index].imageSrc;
     name.textContent = websiteReviews[index].person.getName();
     profession.textContent = websiteReviews[index].person.getProfession();
     reviewCont.textContent = websiteReviews[index].person.getReview();
 
+    // Check if the animation is not active to avoid double-clicking to the button.
     if (!timeline.isActive()) {
         timeline.from('#person-photo', {x: "-100%", opacity: 0, duration: .3, ease: "power1.out"});
         timeline.from('#quot-logo', {x: "-100%", opacity: 0, duration: .3, ease: "power1.out"}, "-=.3");
